@@ -12,19 +12,17 @@ extra_cheese = input() #Y or N
 bill = 0
 
 if size == "S":
-    bill = 15
+    bill += 15
 elif size == "M":
-    bill = 20
-elif size == "L":
-    bill = 25
+    bill += 20
 else:
-    print("Invalid size")
+    bill += 25
 
 if add_pepperoni == "Y":
     if size == "S":
       bill += 2
-elif size == "M" or size == "L":
-    bill += 3
+    else:
+      bill += 3 #medium & large it is $3
 
 if extra_cheese == "Y":
     bill = bill + 1
